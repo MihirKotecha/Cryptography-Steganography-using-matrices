@@ -2,6 +2,25 @@
 from PIL import Image
 import numpy as np
 
+def matrix_multiplication(A, B):
+    rows_A = len(A)
+    cols_A = len(A[0])
+    rows_B = len(B)
+    cols_B = len(B[0])
+
+    assert cols_A == rows_B,"Cannot multiply the two matrices. Incorrect dimensions."
+
+    # Create the result matrix
+    # Dimensions would be rows_A x cols_B
+    C = [[0 for row in range(cols_B)] for col in range(rows_A)]
+
+    for i in range(rows_A):
+        for j in range(cols_B):
+            for k in range(cols_A):
+                C[i][j] += A[i][k] * B[k][j]
+    return C
+
+
 def decode(imageName: str):
     """
     This function decodes the text hidden inside the image
@@ -16,7 +35,7 @@ def decode(imageName: str):
     output = ""
     for rep in range(int(textLen,2)):
         newu = []
-        newv = []
+        newv = [] 
         newsig = []
 
         for i in range(2):
@@ -45,7 +64,7 @@ def decode(imageName: str):
         newsig = np.array(newsig)
 
         reqchr = ''
-        mat = newu.dot(newsig.dot(newv))
+        mat = matrix_multiplication(newu, matrix_multiplication(newsig, newv))
         for i in range(len(mat)):
             for j in range(len(mat[0])):
                 # print(int(np.round(mat[i][j], 1)),end=" ")
