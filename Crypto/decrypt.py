@@ -28,14 +28,9 @@ def deccrypt(encoded_message):
         chars = encoded_message[i:i+4]
         mat = [[ord(chars[0]), ord(chars[1])], [ord(chars[2]), ord(chars[3])]]
         C = matrix_multiplication(A,mat)
-        print(chars)
-        print(C)
         for i in range (2):
             for j in range (2):
                 if(C[i][j]!=95):
                     decoded_message += chr(C[i][j])
 
     return decoded_message
-
-
-print(deccrypt("ĽĻȒȍİĝȁǛ"))

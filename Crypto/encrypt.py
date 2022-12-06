@@ -24,7 +24,6 @@ def encrypt(message: str) -> str:
             space = "_"
             message = message + space
             string_length = len(message)
-            print("Adding space")
 
     encoded_message = ""
 
@@ -32,16 +31,11 @@ def encrypt(message: str) -> str:
         A = [[1,2],[2,3]]
         chars = message[i:i+4]
         mat = [[ord(chars[0]), ord(chars[1])], [ord(chars[2]), ord(chars[3])]]
-        # print(mat)
         C = matrix_multiplication(A,mat)
         encoded_message += chr(C[0][0])
         encoded_message += chr(C[0][1])
         encoded_message += chr(C[1][0])
         encoded_message += chr(C[1][1])
-        # print(C)
 
 
     return encoded_message
-
-
-print(encrypt("mihir"))
