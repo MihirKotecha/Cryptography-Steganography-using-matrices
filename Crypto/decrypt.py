@@ -26,17 +26,18 @@ def deccrypt(encoded_message):
     for i in range(0,string_length,4):
         A = [[-3,2],[2,-1]]
         chars = encoded_message[i:i+4]
-        mat = [[323, 295], [539, 495]]
+        mat = [[ord(chars[0]), ord(chars[1])], [ord(chars[2]), ord(chars[3])]]
+        # mat = [[323, 295], [539, 495]]
         C = matrix_multiplication(A,mat)
         print(chars)
         print(C)
-        decoded_message += chr(C[0][0])
-        decoded_message += chr(C[0][1])
-        decoded_message += chr(C[1][0])
-        decoded_message += chr(C[1][1])
-
-    print(decoded_message)
+        for i in range (2):
+            for j in range (2):
+                if(C[i][j]!=95):
+                    decoded_message += chr(C[i][j])
 
 
-deccrypt("âÆȥǭ")
+    return decoded_message
 
+
+print(deccrypt("ĽĻȒȍİĝȁǛ"))
