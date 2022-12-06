@@ -1,4 +1,3 @@
-
 from PIL import Image
 import numpy as np
 
@@ -21,7 +20,7 @@ def matrix_multiplication(A, B):
     return C
 
 
-def decode(imageName: str):
+def decode(imageName: str) -> str:
     """
     This function decodes the text hidden inside the image
     """
@@ -67,9 +66,7 @@ def decode(imageName: str):
         mat = matrix_multiplication(newu, matrix_multiplication(newsig, newv))
         for i in range(len(mat)):
             for j in range(len(mat[0])):
-                # print(int(np.round(mat[i][j], 1)),end=" ")
                 reqchr += str(int(np.round(mat[i][j], 1)))
-            # print()
 
         output += (chr(int(reqchr, 2)))
     return output
