@@ -15,7 +15,7 @@ def charlist(begin, end):
 
 _encoded = charlist(0,200)
 
-# # Assigning Steganography
+# for Steganography
 # encode(_encoded, "hide")
 # _decoded = decode("hide")
 
@@ -24,7 +24,7 @@ _encoded = charlist(0,200)
 # else:
 #     print("Booooo")
 
-
+# for Cryptography
 # cipher = encrypt(_encoded)
 # decipher = deccrypt(cipher)
 
