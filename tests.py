@@ -16,6 +16,8 @@ def charlist(begin, end):
 _encoded = charlist(0,200)
 
 # for Steganography
+
+
 # encode(_encoded, "hide")
 # _decoded = decode("hide")
 
