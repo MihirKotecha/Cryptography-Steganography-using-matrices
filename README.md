@@ -1,8 +1,4 @@
-<a href="https://github.com/MihirKotecha/Cryptography-Steganography-using-matrices/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=MihirKotecha/Cryptography-Steganography-using-matrices"/>
-</a>
-
-
+<img src="./CONTRIBUTORS.svg">
 
 # Cryptography and Steganography using Matrices
 
