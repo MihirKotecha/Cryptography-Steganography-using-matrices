@@ -1,3 +1,9 @@
+<a href="https://github.com/MihirKotecha/Cryptography-Steganography-using-matrices/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=MihirKotecha/Cryptography-Steganography-using-matrices"/>
+</a>
+
+
+
 # Cryptography and Steganography using Matrices
 
 ### In this project, we are exploring the field of cryptography and steganography with the help of matrices and implementing these processes by creating new algorithms and using some inbuilt python functionalities. We are not trying to achieve the benchmarks of the python libraries that have the functionalities but trying and implement them in a different way that gets the job done.
